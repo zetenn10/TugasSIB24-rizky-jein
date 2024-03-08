@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Pendaftaran</title>
+</head>
+<body>
+
+<h1>Form Pendaftaran</h1>
+<form action="proses_pendaftaran.php" method="post" enctype="multipart/form-data">
+    <label for="nama">Nama:</label><br>
+    <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda"><br><br>
+ 
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" placeholder="Masukkan alamat email Anda"><br><br>
+    
+    <label for="nomor_hp">Nomor HP:</label><br>
+    <input type="text" id="nomor_hp" name="nomor_hp" placeholder="Masukkan nomor HP Anda"><br><br>
+    
+    <label>Jenis Kelamin:</label><br>
+    <input type="radio" id="laki_laki" name="jenis_kelamin" value="Laki-laki">
+    <label for="laki_laki">Laki-laki</label><br>
+    <input type="radio" id="perempuan" name="jenis_kelamin" value="Perempuan">
+    <label for="perempuan">Perempuan</label><br><br>
+    
+    <label>Hobi:</label><br>
+    <input type="checkbox" id="olahraga" name="hobi" value="Olahraga">
+    <label for="olahraga">Olahraga</label><br>
+    <input type="checkbox" id="musik" name="hobi" value="Musik">
+    <label for="musik">Musik</label><br>
+    <input type="checkbox" id="seni" name="hobi" value="Seni">
+    <label for="seni">Seni</label><br><br>
+    
+    <label for="alamat">Alamat Lengkap:</label><br>
+    <textarea id="alamat" name="alamat" rows="4" cols="50"></textarea><br><br>
+    
+    <label for="foto">Foto Diri:</label><br>
+    <input type="file" id="foto" name="foto"><br><br>
+    
+    <input type="submit" value="Daftar">
+</form>
+
+</body>
+</html>
+
+<script>
+    // Ambil elemen-elemen yang dibutuhkan
+    const carousel = document.querySelector('.carousel');
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    let currentIndex = 0;
+
+    // Fungsi untuk menampilkan slide berdasarkan indeks
+    function showSlide(index) {
+        // Sembunyikan semua slide
+        slides.forEach(slide => {
+            slide.style.display = 'none';
+        });
+
+        // Tampilkan slide yang dipilih
+        slides[index].style.display = 'block';
+    }
+
+    // Tampilkan slide pertama saat halaman dimuat
+    showSlide(currentIndex);
+
+    // Event listener untuk tombol "Previous"
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        showSlide(currentIndex);
+    });
+
+    // Event listener untuk tombol "Next"
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+    });
+</script>
+
