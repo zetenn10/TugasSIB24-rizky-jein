@@ -303,9 +303,6 @@ if (string == 2) {
 
 
 
-
-
-
 /*
 let string = "blue"
 
