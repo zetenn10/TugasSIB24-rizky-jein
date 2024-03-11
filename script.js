@@ -288,19 +288,22 @@ if (string) {
 */
 
 
-/*
+
 let string = prompt("1 + 1 = ?")
 
 if (string == 2) {
     alert('Jawaban Anda benar')
-}else if (string >= 2) {
+}else if (string > 2) {
     alert('Jawaban Anda kelebihan')
-}else if (string <= 2) {
+}else if (string < 2) {
     alert('Jawaban Anda kurang')
 }else {
     alert('Jawaban Anda salah')
 }
-*/
+
+
+
+
 
 
 /*
