@@ -4,15 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halaman Utama</title>
-    <style>
-        .center {
-            display: flex;
-            justify-content: center; /* Mengatur posisi horizontal di tengah */
-            align-items: center; /* Mengatur posisi vertikal di tengah */
-            height: 12
-            0vh; /* Menggunakan tinggi viewport untuk mengisi seluruh ketinggian layar */
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
     <h1>Selamat datang di Halaman Utama</h1>
@@ -34,39 +26,8 @@
         <img src="asset/4.jfif" alt="Image 4">
     </div>
 
-    <script>
-        let currentIndex = 0;
-        const images = document.querySelectorAll('#carousel img');
-        const totalImages = images.length;
+    <script src="js/script.js"></script>
 
-        function showImage(index) {
-            images.forEach((img, i) => {
-                if (i === index) {
-                    img.style.display = 'block';
-                } else {
-                    img.style.display = 'none';
-                }
-            });
-        }
-
-        function nextImage() {
-            currentIndex = (currentIndex + 1) % totalImages;
-            showImage(currentIndex);
-        }
-
-        function prevImage() {
-            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-            showImage(currentIndex);
-        }
-
-        showImage(currentIndex);
-
-        setInterval(nextImage, 3000); // Ganti gambar setiap 3 detik
-        
-    </script>
-
-    <!-- <script src="script.js"></script> -->
-    
 </body>
 </html>
 

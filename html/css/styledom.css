@@ -1,0 +1,12 @@
+.center {
+    display: flex;
+    justify-content: center; /* Mengatur posisi horizontal di tengah */
+    align-items: center; /* Mengatur posisi vertikal di tengah */
+    height: 12
+    0vh; /* Menggunakan tinggi viewport untuk mengisi seluruh ketinggian layar */
+}
+#carousel img {
+    display: none;
+    max-width: 100%;
+    height: auto;
+}
