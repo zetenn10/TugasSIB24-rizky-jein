@@ -12,10 +12,15 @@
             height: 12
             0vh; /* Menggunakan tinggi viewport untuk mengisi seluruh ketinggian layar */
         }
+        #carousel img {
+            display: none;
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
-    <h1>Selamat datang di Halaman Utama</h1>
+    <h1>Selamat datang di Halaman Utama (DOM)</h1>
     <p>Silakan pilih salah satu tautan di bawah ini:</p>
     
     <ul>
@@ -28,14 +33,21 @@
     </ul>
     
     <div id="carousel" class="center">
-        <img src="asset/1.jfif" alt="Image 1">
-        <img src="asset/2.jfif" alt="Image 2">
-        <img src="asset/3.jfif" alt="Image 3">
-        <img src="asset/4.jfif" alt="Image 4">
     </div>
 
     <script>
+        const imageSources = ["asset/1.jfif", "asset/2.jfif", "asset/3.jfif", "asset/4.jfif"];
         let currentIndex = 0;
+        const carouselContainer = document.getElementById('carousel');
+
+        // Membuat dan menambahkan elemen gambar ke dalam div carousel
+        imageSources.forEach((src, index) => {
+            const img = document.createElement('img');
+            img.src = src;
+            img.alt = `Image ${index + 1}`;
+            carouselContainer.appendChild(img);
+        });
+
         const images = document.querySelectorAll('#carousel img');
         const totalImages = images.length;
 
@@ -62,11 +74,6 @@
         showImage(currentIndex);
 
         setInterval(nextImage, 3000); // Ganti gambar setiap 3 detik
-        
     </script>
-
-    <!-- <script src="script.js"></script> -->
-    
 </body>
 </html>
-

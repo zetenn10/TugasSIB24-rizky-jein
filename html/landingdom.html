@@ -12,6 +12,11 @@
             height: 12
             0vh; /* Menggunakan tinggi viewport untuk mengisi seluruh ketinggian layar */
         }
+        #carousel img {
+            display: none;
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
@@ -28,45 +33,9 @@
     </ul>
     
     <div id="carousel" class="center">
-        <img src="1.jfif" alt="Image 1">
-        <img src="2.jfif" alt="Image 2">
-        <img src="3.jfif" alt="Image 3">
-        <img src="4.jfif" alt="Image 3">
     </div>
-
-    <script>
-        let currentIndex = 0;
-        const images = document.querySelectorAll('#carousel img');
-        const totalImages = images.length;
-
-        function showImage(index) {
-            images.forEach((img, i) => {
-                if (i === index) {
-                    img.style.display = 'block';
-                } else {
-                    img.style.display = 'none';
-                }
-            });
-        }
-
-        function nextImage() {
-            currentIndex = (currentIndex + 1) % totalImages;
-            showImage(currentIndex);
-        }
-
-        function prevImage() {
-            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-            showImage(currentIndex);
-        }
-
-        showImage(currentIndex);
-
-        setInterval(nextImage, 3000); // Ganti gambar setiap 3 detik
-        
-    </script>
-
-    <!-- <script src="script.js"></script> -->
-    
-</body>
-</html>
-
+ 
+    <script src="dom.js"></script>
+ </body>
+ </html>
+ 
