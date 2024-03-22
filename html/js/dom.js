@@ -28,3 +28,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
     setInterval(nextImage, 3000); // Ganti gambar setiap 3 detik
 });
+
