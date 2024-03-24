@@ -75,9 +75,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 elemen.innerHTML = `
                     <div class="container">
                         <div class="row">
-                            <div class="class="overflow-hidden">
-                                <div class="card" style="min-height=410px">
-                                    <img src="${anime.images.webp.image_url}" alt="${anime.title}" class="card-img-top img-fluid h-100 object-fit-cover">
+                            <div class="class="overflow-hidden" style="height: 200 px;"">
+                                <div class="card">
+                                    <img src="${anime.images.webp.image_url}" alt="${anime.title}" class="card-img-top">
                                     <div class="card-body">
                                         <h2 class="card-title">${anime.title}</h2>
                                         <p class="card-text">Score: ${anime.score}</p>
